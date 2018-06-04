@@ -13,6 +13,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use Mpdf\Mpdf;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 
 class DocDataController extends Controller {
 
@@ -170,7 +171,12 @@ class DocDataController extends Controller {
                 $docEntry->setCourseCode($d["coursecode"]);
                 $entityManager->persist($docEntry);
             }
-            $entityManager->flush();
+            try {
+                $entityManager->flush();
+            } catch (UniqueConstraintViolationException $ex) {
+                $message = $ex->getPrevious()->getMessage();
+                exit($message);
+            }
             return $this->redirectToRoute("list_doc_data");
         }
         return $this->render("document_data/upload_doc_data.html.twig", ["form" => $form->createView()]);

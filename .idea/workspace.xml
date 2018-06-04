@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f052640-d20f-4ca3-a11e-d46a5813dae9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/preset_doc/img/testing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/_var.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/default.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/admin/create_users.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/admin/create_users.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/admin/edit_users.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/admin/edit_users.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/admin/list_users.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/admin/list_users.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/default.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/document/preview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/document/preview.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/document/testing.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/document/testing.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/security/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/security/login.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/ui_base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/ui_base.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/default.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/DocDataController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/DocData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/UserRole.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/CreateUserForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/EditDocDataForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/EditUserForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/DocBaseRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/RecipientRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/_menu.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/create_users.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/edit_users.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/document/preset/h80_hkv.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/document_data/edit_doc_data.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/document_data/list_doc_data.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/document_data/upload_doc_data.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hkv_cert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hkv_cert.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DocDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DocDataController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
-              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -98,11 +46,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/default.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+            <state relative-caret-position="496">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocDataController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/DocDataController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1222">
+              <caret line="178" column="13" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="13" />
+              <folding>
+                <element signature="e#33#56#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,10 +160,10 @@
         <option value="$PROJECT_DIR$/templates/home.html.twig" />
         <option value="$PROJECT_DIR$/templates/document/preset/h80_hkv.html.twig" />
         <option value="$PROJECT_DIR$/templates/document_data/list_doc_data.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/DocDataController.php" />
         <option value="$PROJECT_DIR$/assets/scss/_var.scss" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/scss/default.scss" />
+        <option value="$PROJECT_DIR$/src/Controller/DocDataController.php" />
       </list>
     </option>
   </component>
@@ -322,11 +282,11 @@
       <path value="$PROJECT_DIR$/vendor/setasign/fpdi" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
-    <option name="y" value="2" />
-    <option name="width" value="1378" />
-    <option name="height" value="733" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="820" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -497,7 +457,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161657000" />
+    <option name="totallyTimeSpent" value="164175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -553,13 +513,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/scss/default.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/_var.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -603,6 +556,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+            <element signature="e#117#174#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -641,6 +598,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding>
+            <element signature="e#27#50#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -648,6 +608,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-190">
           <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding>
+            <element signature="e#113#161#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -655,6 +618,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
           <caret line="213" column="5" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="5" />
+          <folding>
+            <element signature="e#42#90#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -662,6 +628,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="46" column="51" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="51" />
+          <folding>
+            <element signature="e#33#53#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -708,6 +677,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="e#34#81#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -743,13 +715,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DocDataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
+          <folding>
+            <element signature="e#27#50#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -784,7 +752,7 @@
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -797,8 +765,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/default.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        <state relative-caret-position="496">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="82" column="6" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DocDataController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1222">
+          <caret line="178" column="13" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="13" />
+          <folding>
+            <element signature="e#33#56#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
