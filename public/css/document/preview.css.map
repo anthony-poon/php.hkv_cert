@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACT,SAAS,EAAE,WAAW;EACtB,gBAAgB,EAAE,QAAQ;EAC1B,MAAM,EAAE,IAAI;EACZ,qBAAW;IAET,KAAK,EAAE,KAAK;IACZ,MAAM,EAAE,KAAK",
+"sources": ["../../../assets/scss/document/preview.scss"],
+"names": [],
+"file": "preview.css"
+}

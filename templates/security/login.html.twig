@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block css %}
+ {% endblock %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        {{ include('_menu.html.twig') }}
+        <div class="rhs-panel col-md-4">
+            <div class="row">
+                <h5 class="col title">
+                    Login
+                </h5>
+            </div>
+            {% if error %}
+                <b class="text-danger">{{ error.messageKey }}</b>
+            {% endif %}
+            {{ form_start(form) }}
+            {{ form_row(form.username, {'full_name':'_username'}) }}
+            {{ form_row(form.password, {'full_name':'_password'}) }}
+            {{ form_row(form.submit, {'attr': {'class': 'btn-primary'}}) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

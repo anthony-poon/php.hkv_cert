@@ -77,11 +77,20 @@
     "monolog/monolog": {
         "version": "1.23.0"
     },
+    "mpdf/mpdf": {
+        "version": "v7.1.0"
+    },
+    "myclabs/deep-copy": {
+        "version": "1.8.0"
+    },
     "nikic/php-parser": {
         "version": "v4.0.1"
     },
     "ocramius/proxy-manager": {
         "version": "2.2.0"
+    },
+    "paragonie/random_compat": {
+        "version": "v2.0.12"
     },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
@@ -91,6 +100,9 @@
     },
     "phpdocumentor/type-resolver": {
         "version": "0.4.0"
+    },
+    "phpoffice/phpspreadsheet": {
+        "version": "1.2.1"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -115,6 +127,9 @@
             "version": "4.0",
             "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
         }
+    },
+    "setasign/fpdi": {
+        "version": "1.6.2"
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.0.2"

@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        {{ include('_menu.html.twig') }}
+        <div class="rhs-panel col">
+            <div class="row">
+                <h5 class="col title">
+                    Edit Document Data
+                </h5>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <a href="{{ path("view_doc_pdf", {"id": doc_data.id}) }}">
+                    <button class="btn btn-sm btn-primary">View Document</button>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+                    {{ form_start(form) }}
+                    {{ form_row(form.doc_id) }}
+                    {{ form_row(form.template_name) }}
+                    {{ form_row(form.course_code) }}
+                    {{ form_row(form.recipient_name) }}
+                    {{ form_row(form.recipient_email) }}
+                    {#
+                        TODO: Allow editing of template data
+                        {% for kv_pair in form.json_data %}
+                            <div>{{ form_row(kv_pair) }}</div>
+                        {% endfor %}
+                    #}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

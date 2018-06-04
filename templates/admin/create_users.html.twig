@@ -1,0 +1,76 @@
+{% extends "base.html.twig" %}
+
+{% block css %}
+{% endblock %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <div class="row" >
+        {{ include('_menu.html.twig') }}
+        <div class="rhs-panel col">
+            <div class="row">
+                <div class="user-panel panel col-3">
+                    <div class="row">
+                        <h5 class="col title">
+                            User List
+                        </h5>
+                    </div>
+                    {% for u in users %}
+                        <div class="row">
+                            <a href="{{ path('edit_users', {'id': u.id}) }}" class="clickable col">
+                                {{ u.username }}
+                            </a>
+                        </div>
+                    {% endfor %}
+                    <div class="row">
+                        <a href="{{ path('new_users') }}" class="d-flex justify-content-center clickable col">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="create-panel panel col">
+                    <div class="row">
+                        <h5 class="col title">
+                            Create User
+                        </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="form-wrapper">
+                            {{ form_start(form) }}
+                            <div class="row">
+                                <div class="col">
+                                    {{ form_row(form.username) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    {{ form_row(form.email) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    {{ form_row(form.plainPassword.first) }}
+                                </div>
+                                <div class="col">
+                                    {{ form_row(form.plainPassword.second) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    {{ form_row(form.userRoles) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    {{ form_row(form.submit, {'attr': {'class': 'btn-primary'}}) }}
+                                </div>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

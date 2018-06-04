@@ -1,0 +1,71 @@
+{% extends "base.html.twig" %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        {{ include('_menu.html.twig') }}
+        <div class="rhs-panel col">
+            <div class="row">
+                <h5 class="col title">
+                    View Document Data
+                </h5>
+            </div>
+            <div class="row">
+                <a href="{{ path("download_all_pdf") }}" class="clickable col-auto">
+                    Download All
+                </a>
+            </div>
+            <table class="table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Doc. ID</th>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Template</th>
+                        <th scope="col">Create Date</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for entry in doc_entry %}
+
+                    <tr>
+
+                        <td>
+                            {{ entry.recipientName }}
+                        </td>
+
+                        <td>
+                            {{ entry.docId }}
+                        </td>
+                        <td>
+                            {{ entry.courseCode }}
+                        </td>
+                        <td>
+                            {{ entry.templateName }}
+                        </td>
+                        <td>
+                            {{ entry.createDate|date('Y-m-d') }}
+                        </td>
+                        <td>
+                            <a class="btn-primary btn-sm" href="{{ path("edit_doc_data", {"id": entry.Id}) }}">
+                                Edit
+                            </a>
+                            <a class="btn-danger btn-sm" href="{{ path("delete_doc_data", {"id": entry.Id}) }}">
+                                Delete
+                            </a>
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+{% endblock %}

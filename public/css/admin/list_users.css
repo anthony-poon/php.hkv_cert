@@ -1,0 +1,18 @@
+.user-panel {
+  margin: 8px;
+  min-height: 60vh;
+  background-color: white;
+  width: 280px; }
+  .user-panel .clickable {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    border-collapse: collapse; }
+  .user-panel .clickable:hover {
+    background-color: #03a9f4;
+    color: white; }
+
+.edit-panel {
+  width: 500px; }
+
+/*# sourceMappingURL=list_users.css.map */

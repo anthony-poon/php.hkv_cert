@@ -1,0 +1,9 @@
+#pdf-panel {
+  transform: scale(0.75);
+  transform-origin: top left;
+  height: auto; }
+  #pdf-panel #pdf-frame {
+    width: 210mm;
+    height: 297mm; }
+
+/*# sourceMappingURL=preview.css.map */
