@@ -19,7 +19,7 @@ class DocDataController extends Controller {
 
 
     /**
-     * @Route("/doc-data", name="list_doc_data")
+     * @Route("/admin/doc-data", name="list_doc_data")
      */
     public function listDocData() {
         $repo = $this->getDoctrine()->getRepository(DocData::class);
@@ -28,7 +28,7 @@ class DocDataController extends Controller {
     }
 
     /**
-     * @Route("/doc-data/{id}", name="edit_doc_data", requirements={"id"="^\d+"})
+     * @Route("/admin/doc-data/{id}", name="edit_doc_data", requirements={"id"="^\d+"})
      */
     public function editDocData(int $id) {
         $repo = $this->getDoctrine()->getRepository(DocData::class);
@@ -41,7 +41,7 @@ class DocDataController extends Controller {
     }
 
     /**
-     * @Route("/doc-data/delete/{id}", name="delete_doc_data", requirements={"id"="^\d+"})
+     * @Route("/admin/doc-data/delete/{id}", name="delete_doc_data", requirements={"id"="^\d+"})
      */
     public function deleteDocData(int $id) {
         $repo = $this->getDoctrine()->getRepository(DocData::class);
@@ -53,7 +53,7 @@ class DocDataController extends Controller {
     }
 
     /**
-     * @Route("/doc-data/pdf/{id}", name="view_doc_pdf", requirements={"id"="^\d+"})
+     * @Route("/admin/doc-data/pdf/{id}", name="view_doc_pdf", requirements={"id"="^\d+"})
      */
     public function generatePdf(int $id) {
         $repo = $this->getDoctrine()->getRepository(DocData::class);
@@ -69,7 +69,7 @@ class DocDataController extends Controller {
     }
 
     /**
-     * @Route("/doc-data/pdf", name="download_all_pdf")
+     * @Route("/admin/doc-data/pdf", name="download_all_pdf")
      */
     public function downloadAll() {
         $repo = $this->getDoctrine()->getRepository(DocData::class);
@@ -103,7 +103,7 @@ class DocDataController extends Controller {
     }
 
     /**
-     * @Route("/doc-data/upload", name="upload_doc_data")
+     * @Route("/admin/doc-data/upload", name="upload_doc_data")
      */
     public function uploadData(Request $request) {
         $form = $this->createFormBuilder()

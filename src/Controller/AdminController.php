@@ -13,12 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AdminController extends Controller {
-    /**
-     * @Route("/admin", name="admin_home")
-     */
-    public function admin() {
-        return new Response('<html><body>Admin page!</body></html>');
-    }
+
 
     /**
      * @Route("/admin/users/new", name="new_users")
@@ -35,7 +30,7 @@ class AdminController extends Controller {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('edit_users');
         }
         return $this->render('admin/create_users.html.twig', array(
             'form' => $form->createView(),
