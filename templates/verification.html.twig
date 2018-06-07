@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block css %}
+{% endblock %}
+
+{% block body %}
+    <div class="row d-flex justify-content-center">
+        <div class="col-auto">
+            {% if name %}
+                <div class="row">
+                    <div class="col">
+                        The certification belongs to the following person:
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Name:
+                    </div>
+                    <div class="col">
+                        {{ name }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Coruse Code:
+                    </div>
+                    <div class="col">
+                        {{ course }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Cert Code:
+                    </div>
+                    <div class="col">
+                        {{ cert_no }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Course Name:
+                    </div>
+                    <div class="col">
+                        {{ course_name }}
+                    </div>
+                </div>
+            {% else %}
+            <div class="row">
+                <div class="col">
+                    Provided document ID is invalid.
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
