@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Table(name="doc_data")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\DocDataRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class DocData {

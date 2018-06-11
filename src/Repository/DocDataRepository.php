@@ -2,24 +2,21 @@
 
 namespace App\Repository;
 
-use App\Entity\Recipient;
+use App\Entity\DocData;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method Recipient|null find($id, $lockMode = null, $lockVersion = null)
- * @method Recipient|null findOneBy(array $criteria, array $orderBy = null)
- * @method Recipient[]    findAll()
- * @method Recipient[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method DocData|null find($id, $lockMode = null, $lockVersion = null)
+ * @method DocData|null findOneBy(array $criteria, array $orderBy = null)
+ * @method DocData[]    findAll()
+ * @method DocData[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class RecipientRepository extends ServiceEntityRepository
-{
-    public function __construct(RegistryInterface $registry)
-    {
-        parent::__construct($registry, Recipient::class);
+class DocDataRepository extends ServiceEntityRepository {
+    public function __construct(RegistryInterface $registry) {
+        parent::__construct($registry, DocData::class);
     }
-
-//    /**
+    //    /**
 //     * @return User[] Returns an array of User objects
 //     */
     /*

@@ -30,10 +30,18 @@ class DocDataController extends Controller {
     /**
      * @Route("/admin/doc-data/{id}", name="edit_doc_data", requirements={"id"="^\d+"})
      */
-    public function editDocData(int $id) {
+    public function editDocData(Request $request, int $id) {
         $repo = $this->getDoctrine()->getRepository(DocData::class);
         $docData = $repo->find($id);
-        $form = $this->createForm(EditDocDataForm::class, $docData);
+        $form = $this->createForm(EditDocDataForm::class, $docData, array(
+            'action' => $this->generateUrl("edit_doc_data", ["id" => $id])
+        ));
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($docData);
+            $em->flush();
+        }
         return $this->render("document_data/edit_doc_data.html.twig", array(
             "doc_data" => $docData,
             "form" => $form->createView()
@@ -123,7 +131,7 @@ class DocDataController extends Controller {
             $sheet = $excel->getSheet(0);
             $header = [];
             $data = [];
-
+            $docIdArr = [];
             // Load data into array
             foreach ($sheet->getRowIterator() as $row) {
                 if ($row->getRowIndex() == 1) {
@@ -140,6 +148,9 @@ class DocDataController extends Controller {
                         $value = $cell->getFormattedValue();
                         if (!empty($value)) {
                             $tmpArr[$header[$headerOffset]] = $value;
+                            if ($header[$headerOffset] == "certno") {
+                                $docIdArr[] = $value;
+                            }
                         }
                         $headerOffset++;
                     }
@@ -149,12 +160,18 @@ class DocDataController extends Controller {
                 }
             }
             $entityManager = $this->getDoctrine()->getManager();
+            $docDataArr = $entityManager->getRepository(DocData::class)->findBy(["docId" => $docIdArr]);
+            $updateDocData = [];
+            /* @var \App\Entity\DocData $docData */
+            foreach ($docDataArr as $docData) {
+                $updateDocData[$docData->getDocId()] = $docData;
+            }
             foreach ($data as $d) {
-                $docEntry = new DocData();
-                $docEntry->setJsonData($d);
-                $docEntry->setTemplateName($d["templateno"]);
-                $docEntry->setDocId($d["certno"]);
-                $docEntry->setRecipientEmail($d["email"]);
+                $docData = $updateDocData[$d["certno"]] ?? new DocData();
+                $docData->setJsonData($d);
+                $docData->setTemplateName($d["templateno"]);
+                $docData->setDocId($d["certno"]);
+                $docData->setRecipientEmail($d["email"]);
                 $name = "";
                 if (!empty($d["prefix"])) {
                     $name .= $d["prefix"]." ";
@@ -166,17 +183,12 @@ class DocDataController extends Controller {
                     $name .= $d["last_name"];
                 }
                 $name = trim($name);
-                $docEntry->setRecipientName($name);
-                $docEntry->setRecipientEmail($d["email"]);
-                $docEntry->setCourseCode($d["coursecode"]);
-                $entityManager->persist($docEntry);
+                $docData->setRecipientName($name);
+                $docData->setRecipientEmail($d["email"]);
+                $docData->setCourseCode($d["coursecode"]);
+                $entityManager->persist($docData);
             }
-            try {
-                $entityManager->flush();
-            } catch (UniqueConstraintViolationException $ex) {
-                $message = $ex->getPrevious()->getMessage();
-                exit($message);
-            }
+            $entityManager->flush();
             return $this->redirectToRoute("list_doc_data");
         }
         return $this->render("document_data/upload_doc_data.html.twig", ["form" => $form->createView()]);
