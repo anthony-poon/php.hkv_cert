@@ -68,9 +68,17 @@ class DocDataController extends Controller {
         /* @var DocData $docData */
         $docData = $repo->find($id);
         $templateName = strtolower($docData->getTemplateName());
-        $html = $this->renderView("document/preset/$templateName.html.twig", array(
-            "doc_data" => $docData->getJsonData(),
-        ));
+        $html = $this->renderView("document/preset/$templateName.html.twig", [
+            "cert_no" => $docData->getDocId(),
+            "atp_delegate_id" => $docData->getJsonData()["atp_delegate_id"],
+            "first_name" => $docData->getFirstName(),
+            "last_name" => $docData->getLastName(),
+            "duration" => $docData->getJsonData()["duration"],
+            "dates" => $docData->getJsonData()["dates"],
+            "city" => $docData->getJsonData()["city"],
+            "country" => $docData->getJsonData()["country"],
+            "course_id" => $docData->getJsonData()["course_id"],
+        ]);
         $mpdf = new Mpdf();
         $mpdf->WriteHTML($html);
         $mpdf->Output();
@@ -88,9 +96,17 @@ class DocDataController extends Controller {
         $zip->open($tmpName, \ZipArchive::CREATE);
         foreach ($docDataArr as $docData) {
             $templateName = strtolower($docData->getTemplateName());
-            $html = $this->renderView("document/preset/$templateName.html.twig", array(
-                "doc_data" => $docData->getJsonData(),
-            ));
+            $html = $this->renderView("document/preset/$templateName.html.twig", [
+                "cert_no" => $docData->getDocId(),
+                "atp_delegate_id" => $docData->getJsonData()["atp_delegate_id"],
+                "first_name" => $docData->getFirstName(),
+                "last_name" => $docData->getLastName(),
+                "duration" => $docData->getJsonData()["duration"],
+                "dates" => $docData->getJsonData()["dates"],
+                "city" => $docData->getJsonData()["city"],
+                "country" => $docData->getJsonData()["country"],
+                "course_id" => $docData->getJsonData()["course_id"],
+            ]);
             $mpdf = new Mpdf();
             $mpdf->WriteHTML($html);
             $str = $mpdf->Output(null, \Mpdf\Output\Destination::STRING_RETURN);
@@ -147,9 +163,9 @@ class DocDataController extends Controller {
                     foreach ($row->getCellIterator() as $cell) {
                         $value = $cell->getFormattedValue();
                         if (!empty($value)) {
-                            $tmpArr[$header[$headerOffset]] = $value;
+                            $tmpArr[$header[$headerOffset]] = trim($value);
                             if ($header[$headerOffset] == "certno") {
-                                $docIdArr[] = $value;
+                                $docIdArr[] = trim($value);
                             }
                         }
                         $headerOffset++;
@@ -172,18 +188,8 @@ class DocDataController extends Controller {
                 $docData->setTemplateName($d["templateno"]);
                 $docData->setDocId($d["certno"]);
                 $docData->setRecipientEmail($d["email"]);
-                $name = "";
-                if (!empty($d["prefix"])) {
-                    $name .= $d["prefix"]." ";
-                }
-                if (!empty($d["first_name"])) {
-                    $name .= $d["first_name"]." ";
-                }
-                if (!empty($d["last_name"])) {
-                    $name .= $d["last_name"];
-                }
-                $name = trim($name);
-                $docData->setRecipientName($name);
+                $docData->setFirstName($d["first_name"]);
+                $docData->setLastName($d["last_name"]);
                 $docData->setRecipientEmail($d["email"]);
                 $docData->setCourseCode($d["coursecode"]);
                 $entityManager->persist($docData);

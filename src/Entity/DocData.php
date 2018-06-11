@@ -39,10 +39,17 @@ class DocData {
 
     /**
      * @var string
-     * @ORM\Column(type="string", length=64, name="recipient_name")
+     * @ORM\Column(type="string", length=64, name="first_name")
      * @Assert\NotBlank()
      */
-    private $recipientName;
+    private $firstName;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", length=64, name="last_name")
+     * @Assert\NotBlank()
+     */
+    private $lastName;
 
     /**
      * @var string
@@ -111,15 +118,33 @@ class DocData {
     /**
      * @return string
      */
-    public function getRecipientName(): string {
-        return $this->recipientName;
+    public function getFirstName(): string {
+        return $this->firstName;
     }
 
     /**
-     * @param string $recipientName
+     * @param string $firstName
+     * @return DocData
      */
-    public function setRecipientName(string $recipientName): void {
-        $this->recipientName = $recipientName;
+    public function setFirstName(string $firstName): DocData {
+        $this->firstName = $firstName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName(): string {
+        return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     * @return DocData
+     */
+    public function setLastName(string $lastName): DocData {
+        $this->lastName = $lastName;
+        return $this;
     }
 
     /**

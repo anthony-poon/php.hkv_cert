@@ -19,7 +19,8 @@ class EditDocDataForm extends AbstractType{
             ->add('doc_id', TextType::class)
             ->add('template_name', TextType::class)
             ->add('course_code', TextType::class)
-            ->add('recipient_name', TextType::class)
+            ->add('first_name', TextType::class)
+            ->add('last_name', TextType::class)
             ->add('recipient_email', EmailType::class)
             ->add('submit', SubmitType::class);
             // TODO: Allow edit for template data
